@@ -1947,6 +1947,10 @@ input, select, textarea {
 			margin-bottom: 0.25em;
 		}
 
+		.box.style2 {
+			border-radius: 1%;
+		}
+
 		.box.style2 .image {
 			position: relative;
 			left: 2em;
