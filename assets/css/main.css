@@ -7,6 +7,12 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root {
+  --color-primary: #FDECF2;
+  --color-secondary: #7B3952;
+}
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -2036,7 +2042,7 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		background-color: #7B3952;
+		background-color: var(--color-secondary);
 		text-align: center;
 		position: fixed;
 		left: 0;
@@ -2407,7 +2413,7 @@ input, select, textarea {
 
 			#top {
 				padding: 3em 0;
-				background-color: #FDECF2;
+				background-color: var(--color-primary);
 			}
 
 				#top .image {
