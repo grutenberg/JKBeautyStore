@@ -1692,7 +1692,7 @@ input, select, textarea {
 		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #43B3E0;
+		background-color: var(--color-secondary);
 		padding: 1em 2.35em 1em 2.35em;
 		font-size: 1.1em;
 		max-width: 24em;
@@ -1714,6 +1714,18 @@ input, select, textarea {
 		.button:active {
 			background-color: #3BA8D3;
 			top: 1px;
+		}
+
+		input[type="button"].contact,
+		input[type="submit"].contact,
+		input[type="reset"].contact,
+		button.contact,
+		.button.contact {
+			background-color: #25D366 !important;
+			color: #fff !important;
+		}
+		.button.contact:hover, .button.contact:active {
+			background-color: #075E54 !important;
 		}
 
 		input[type="button"].large,
