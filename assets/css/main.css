@@ -2028,7 +2028,7 @@ input, select, textarea {
 
 		.wrapper.style1 {
 			background-image: none;
-			background-color: #fff;
+			background-color: var(--color-primary);
 		}
 
 		.wrapper.style2 {
