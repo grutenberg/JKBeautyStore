@@ -219,6 +219,17 @@ input, select, textarea {
 			margin: 0;
 		}
 
+		section, article .section-header {
+			background-color: var(--color-secondary);
+			border-radius: 8px;
+			padding: 1em;
+		}
+
+		section, article .section-header h2 {
+			margin: 0px;
+			text-shadow: 1px 1px 4px #fff;
+		}
+
 	footer {
 		margin: 3em 0 0 0;
 	}
