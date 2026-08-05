@@ -2037,6 +2037,10 @@ input, select, textarea {
 		.wrapper.style1 {
 			background-image: none;
 			background-color: var(--color-primary);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 90vh;
 		}
 
 		.wrapper.style2 {
