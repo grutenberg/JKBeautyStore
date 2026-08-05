@@ -1960,6 +1960,7 @@ input, select, textarea {
 
 		.box.style2 {
 			border-radius: 1%;
+			background-color: var(--color-primary);
 		}
 
 		.box.style2 .image {
