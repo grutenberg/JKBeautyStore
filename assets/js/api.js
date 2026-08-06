@@ -72,6 +72,10 @@ const API_URL = 'https://script.googleusercontent.com/macros/echo?user_content_k
 			return;
 		}
 
+		$.each(serviceSections, function (_, section) {
+			showMessage(section, 'Cargando servicios...');
+		});
+
 		$.ajax({
 			url: API_URL,
 			dataType: 'json'
