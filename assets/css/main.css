@@ -1965,6 +1965,11 @@ input, select, textarea {
 			margin-bottom: 0.25em;
 		}
 
+		.box.style2 > a {
+			color: inherit;
+			text-decoration: none;
+		}
+
 		.box.style2 {
 			border-radius: 1%;
 			background-color: var(--color-primary);
