@@ -44,7 +44,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwcHVffKRTz6d7G9YsPgAjD
 		}
 
 		$.each(servicesByType, function (type, servicesForType) {
-			const $box = $('<section>', { class: 'box style1' }).append(
+			const $box = $('<section>', { class: 'box style1', style: 'height: 100%'}).append(
 				$('<h3>').text(type)
 			);
 
