@@ -1,5 +1,5 @@
 /* Replace this value when the services API is available. */
-const API_URL = 'https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnRbManXK5SyhKY7MYC5jpD-4JKsmbSU-Iu6wmQLuMD9_84xWK4PjW2x0b2P_MDZkww8IlyTpjxG2KjSCAw1a9Qk-dv1BXKefrct-sPeSk8aGJHaYcDb8BkN2RBBM0yCAQhsdWfcGY8k3WpcPnzOlnT9CSYCcdnsl2CLogXpDfIPYKBY4wjCMmoQR_y_7QZZQzcqT7d_jJpaVRmd0ib8RdX_EzzuQU3jmbQs96UEDl6cjSL8mYK10VnKOgICDIBgSfJJqRWK6bHwLo9zAF1IYNnscLH1yA&lib=MH9mNIvb3UTr11Qk-QZPZAFWkeGDb2B6v';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwcHVffKRTz6d7G9YsPgAjDm6uC5NB_HAhtmg3FSWpoIkRN6sSgXRQwrOL1fxIoRfdx3g/exec';
 
 (function ($) {
 	'use strict';
@@ -51,7 +51,9 @@ const API_URL = 'https://script.googleusercontent.com/macros/echo?user_content_k
 			$.each(servicesForType, function (_, service) {
 				$box.append(
 					$('<div>', { class: 'row' }).append(
-						$('<div>', { class: 'col-8' }).css('text-align', 'start').text('✨ ' + service.name),
+						$('<div>', { class: 'col-8', 'data-i18n': service.index })
+							.css('text-align', 'start')
+							.text(service.name),
 						$('<div>', { class: 'col-4' }).text(service.price)
 					)
 				);
