@@ -67,7 +67,6 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwcHVffKRTz6d7G9YsPgAjD
 
 	function storeServicesTranslations(services) {
 		const t = window.JKi18n && window.JKi18n.translations;
-		console.log('Storing services translations:', services);
 		if (!Array.isArray(services)) {
 			return;
 		}
@@ -77,15 +76,12 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwcHVffKRTz6d7G9YsPgAjD
 				return;
 			}
 
-			console.log("Espanish options:", t.es.options);
-
 			t.es.options[service.index] = service.name;
 			t.en.options[service.index] = service.name_en;
 			t.pt.options[service.index] = service.name_pt;
 
 		});
 
-		console.log("Updated translations:", t.es.options);
 	}
 
 	function loadServices() {

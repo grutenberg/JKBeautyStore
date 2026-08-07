@@ -184,7 +184,6 @@
 		elements.forEach(function (element) {
 			var key = element.getAttribute('data-i18n');
 			var translation = getTranslation(language, key) || getTranslation(defaultLanguage, key);
-            console.log('Translating key:', key, 'to language:', language, 'translation found:', translation);
 
 			if (translation) {
 				element.textContent = translation;
