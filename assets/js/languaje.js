@@ -51,7 +51,8 @@
 			footer: {
 				copyright: '@grutenberg. Todos los derechos reservados.',
 				design: 'Diseño:'
-			}
+			},
+            options: {}
 		},
 		pt: {
 			nav: {
@@ -90,7 +91,8 @@
 			footer: {
 				copyright: '@grutenberg. Todos os direitos reservados.',
 				design: 'Design:'
-			}
+			},
+            options: {}
 		},
 		en: {
 			nav: {
@@ -129,7 +131,8 @@
 			footer: {
 				copyright: '@grutenberg. All rights reserved.',
 				design: 'Design:'
-			}
+			},
+            options: {}
 		}
 	};
 
@@ -175,6 +178,7 @@
 		elements.forEach(function (element) {
 			var key = element.getAttribute('data-i18n');
 			var translation = getTranslation(language, key) || getTranslation(defaultLanguage, key);
+            console.log('Translating key:', key, 'to language:', language, 'translation found:', translation);
 
 			if (translation) {
 				element.textContent = translation;
@@ -216,4 +220,8 @@
 	}
 
 	setUpLanguageSwitcher();
+
+    window.JKi18n = {
+        translations: translations,
+    }
 })();

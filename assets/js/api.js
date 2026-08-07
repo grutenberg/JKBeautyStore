@@ -51,7 +51,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwcHVffKRTz6d7G9YsPgAjD
 			$.each(servicesForType, function (_, service) {
 				$box.append(
 					$('<div>', { class: 'row' }).append(
-						$('<div>', { class: 'col-8', 'data-i18n': service.index })
+						$('<div>', { class: 'col-8', 'data-i18n': "options."+service.index })
 							.css('text-align', 'start')
 							.text(service.name),
 						$('<div>', { class: 'col-4' }).text(service.price)
@@ -63,6 +63,29 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwcHVffKRTz6d7G9YsPgAjD
 				$('<div>', { class: 'col-4 col-6-medium col-12-small' }).append($box)
 			);
 		});
+	}
+
+	function storeServicesTranslations(services) {
+		const t = window.JKi18n && window.JKi18n.translations;
+		console.log('Storing services translations:', services);
+		if (!Array.isArray(services)) {
+			return;
+		}
+
+		$.each(services, function (_, service) {
+			if (!service || typeof service.index !== 'string' || typeof service.name !== 'string') {
+				return;
+			}
+
+			console.log("Espanish options:", t.es.options);
+
+			t.es.options[service.index] = service.name;
+			t.en.options[service.index] = service.name_en;
+			t.pt.options[service.index] = service.name_pt;
+
+		});
+
+		console.log("Updated translations:", t.es.options);
 	}
 
 	function loadServices() {
@@ -84,6 +107,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwcHVffKRTz6d7G9YsPgAjD
 		}).done(function (data) {
 			$.each(serviceSections, function (_, section) {
 				renderServices(section, $.isArray(data && data[section]) ? data[section] : []);
+				storeServicesTranslations($.isArray(data && data[section]) ? data[section] : []);
 			});
 		}).fail(function (jqXHR, textStatus, errorThrown) {
 			$.each(serviceSections, function (_, section) {
