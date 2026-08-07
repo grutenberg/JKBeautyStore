@@ -18,13 +18,13 @@
 			<nav id="nav">
 				<ul class="">
 					<li><a href="#top">
-						<i class="fas fa-home"></i> <span>Inicio</span>
+						<i class="fas fa-home"></i> <span data-i18n="nav.home">Inicio</span>
 					</a></li>
 					<li><a href="#services">
-						<i class="fas fa-spa"></i> <span>Servicios</span>
+						<i class="fas fa-spa"></i> <span data-i18n="nav.services">Servicios</span>
 					</a></li>
 					<li><a href="#contact">
-						<i class="fab fa-whatsapp"></i> <span>Contacto</span>
+						<i class="fab fa-whatsapp"></i> <span data-i18n="nav.contact">Contacto</span>
 					</a></li>
 					<li>
 						<button id="language-switcher" class="language-switcher" type="button" aria-label="Cambiar idioma. Idioma actual: Español" title="Cambiar idioma">
@@ -46,11 +46,11 @@
 								<h1><span data-i18n="hero.titlePrefix">Somos</span> <strong>JK Beauty Store</strong>.</h1>
 							</header>
 							<p>
-								Tu lugar de<br>
-								✨ Uñas, Cejas & Masajes<br>
-								💖 Belleza y bienestar en un solo lugar<br>
+								<span data-i18n="hero.tagline">Tu lugar de</span><br>
+								<span data-i18n="hero.services">✨ Uñas, Cejas & Masajes</span><br>
+								<span data-i18n="hero.wellbeing">💖 Belleza y bienestar en un solo lugar</span><br>
 							</p>
-							<a href="#contact" class="button large scrolly">Contáctanos</a>
+							<a href="#contact" class="button large scrolly" data-i18n="hero.contactButton">Contactanos</a>
 						</div>
 					</div>
 				</div>
@@ -60,15 +60,15 @@
 			<article id="services" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>Lo que hacemos.</h2>
-						<p>Cubrimos un amplio rango de servicios para tu belleza y bienestar</p>
+						<h2 data-i18n="services.title">Lo que hacemos.</h2>
+						<p data-i18n="services.description">Cubrimos un amplio rango de servicios para tu belleza y bienestar</p>
 					</header>
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#manicure" class="scrolly">
 									<div class="image featured"><img src="images/nails1.jpg" alt="" /></div>
-									<h3>Manicuría</h3>
+									<h3 data-i18n="services.manicure">Manicuría</h3>
 								</a>
 							</article>
 						</div>
@@ -76,7 +76,7 @@
 							<article class="box style2">
 								<a href="#massage" class="scrolly">
 									<div class="image featured"><img src="images/massage.jpg" alt="" /></div>
-									<h3>Masajes</h3>
+									<h3 data-i18n="services.massage">Masajes</h3>
 								</a>
 							</article>
 						</div>
@@ -84,7 +84,7 @@
 							<article class="box style2">
 								<a href="#lashing" class="scrolly">
 									<div class="image featured"><img src="images/lash.jpg" alt="" /></div>
-									<h3>Lashista y Cejas</h3>
+									<h3 data-i18n="services.lashing">Lashista y Cejas</h3>
 								</a>
 							</article>
 						</div>
@@ -96,7 +96,7 @@
 			<article id="manicure" class="wrapper style2">
 				<div class="container">
 					<header class="section-header">
-						<h2>Nuestras Opciones de Manicuría</h2>
+						<h2 data-i18n="manicure.title">Nuestras Opciones de Manicuría</h2>
 					</header>
 					<div class="row aln-center">
 
@@ -108,7 +108,7 @@
 			<article id="massage" class="wrapper style2">
 				<div class="container">
 					<header class="section-header">
-						<h2>Nuestras Opciones de Masajes</h2>
+						<h2 data-i18n="massage.title">Nuestras Opciones de Masajes</h2>
 					</header>
 					<div class="row aln-center">
 
@@ -120,7 +120,7 @@
 			<article id="lashing" class="wrapper style2">
 				<div class="container">
 					<header class="section-header">
-						<h2>Nuestras Opciones de Lashing/Cejas</h2>
+						<h2 data-i18n="lashing.title">Nuestras Opciones de Lashing/Cejas</h2>
 					</header>
 					<div class="row aln-center">
 
@@ -133,8 +133,8 @@
 			<article id="contact" class="wrapper style4">
 				<div class="container medium">
 					<header>
-						<h2>Contáctanos.</h2>
-						<p>Estamos aquí para ayudarte con tus necesidades, no dudes en mandarnos un mensaje!</p>
+						<h2 data-i18n="contact.title">Contactanos.</h2>
+						<p data-i18n="contact.description">Estamos aca para ayudarte con tus necesidades, no dudes en mandarnos un mensaje!</p>
 					</header>
 					<a href="https://api.whatsapp.com/send/?phone=541127171110" class="button contact scrolly">
 						<span>WhatsApp</span> <i class="fab fa-whatsapp"></i>
@@ -142,7 +142,7 @@
 					<div class="row">
 						<div class="col-12">
 							<hr />
-							<h3>Encuéntranos en...</h3>
+							<h3 data-i18n="contact.findUs">Encontranos en...</h3>
 								<a
 									href="https://www.instagram.com/jkbeautystudio.ba/" 
 									class="button large scrolly"
@@ -173,7 +173,7 @@
 					</div>
 					<footer>
 						<ul id="copyright">
-							<li>&copy; @grutenberg. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; <span data-i18n="footer.copyright">@grutenberg. Todos los derechos reservados.</span></li><li><span data-i18n="footer.design">Diseño:</span> <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 				</div>
