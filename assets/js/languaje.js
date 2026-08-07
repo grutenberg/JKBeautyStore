@@ -8,11 +8,17 @@
 	var defaultLanguage = 'es';
 	var languageOrder = ['es', 'pt', 'en'];
 	var storageKey = 'jk-beauty-language';
-	var languageNames = {
-		es: 'Español',
-		pt: 'Português',
-		en: 'English'
-	};
+    var languageNames = {
+        es: 'Español',
+        pt: 'Português',
+        en: 'English'
+    };
+
+    var languageFlags = {
+        es: '🇦🇷',
+        pt: '🇧🇷',
+        en: '🇺🇸'
+    };
 	var translations = {
 		es: {
 			nav: {
@@ -167,9 +173,9 @@
 			return;
 		}
 
-		switcher.textContent = language.toUpperCase();
-		switcher.setAttribute('aria-label', 'Cambiar idioma. Idioma actual: ' + languageNames[language]);
-		switcher.title = 'Cambiar idioma';
+        switcher.textContent = languageFlags[language];
+        switcher.setAttribute('aria-label', 'Cambiar idioma. Idioma actual: ' + languageNames[language]);
+        switcher.title = languageNames[language];
 	}
 
 	function translatePage(language) {

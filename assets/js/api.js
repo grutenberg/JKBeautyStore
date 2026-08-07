@@ -54,7 +54,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwcHVffKRTz6d7G9YsPgAjD
 						$('<div>', { class: 'col-8', 'data-i18n': "options."+service.index })
 							.css('text-align', 'start')
 							.text(service.name),
-						$('<div>', { class: 'col-4' }).text(service.price)
+						$('<div>', { class: 'col-4' }).text("$"+service.price)
 					)
 				);
 			});
